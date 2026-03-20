@@ -1,0 +1,175 @@
+.section-3 {
+    padding: 100px 0;
+    background-color: #641320;
+    color: #fff;
+}
+
+/* title */
+.section-3 .section-3-title h5 {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-decoration: underline #fff 1px;
+}
+
+.section-3 .section-3-title h2 {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.section-3 .section-3-title h2 span {
+    text-decoration: underline #fff 1px;
+    color: #fff;
+}
+
+/* body item */
+.section-3 .section-3-item {
+    padding: 20px 40px;
+    border: 0.5px solid #ffffff80;
+    border-top: 4px solid #ffffff80;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.section-3 .section-3-item:hover {
+    border-top: 4px solid #fff;
+}
+
+.section-3 .section-3-item .service-icon {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.section-3 .section-3-item .service-content .title-content {
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.section-3 .section-3-item .service-content .title-content a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.section-3 .section-3-item .service-content>p {
+    text-align: center;
+    font-size: 18px;
+    opacity: 0.8;
+    margin-bottom: 40px;
+}
+
+.section-3 .section-3-item .service-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border: 0.5px solid #ffffff80;
+    color: #fff;
+    margin-top: 20px;
+    width: 100%;
+    padding: 15px;
+    gap: 10px;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.section-3 .section-3-item .service-btn:hover {
+    border: 1px solid #fff;
+}
+
+.section-3 .section-3-item .service-btn i {
+    rotate: 45deg;
+}
+
+
+/* =========================================
+   RESPONSIVE CHO SECTION 3
+========================================= */
+
+/* Dành cho màn hình Tablet (Dưới 992px) */
+@media (max-width: 991px) {
+    .section-3 .section-3-title h2 {
+        font-size: 38px;
+        /* Thu nhỏ tiêu đề một chút */
+        margin-bottom: 30px;
+    }
+
+    .section-3 .section-3-item {
+        margin-bottom: 30px;
+        /* Thêm margin-bottom để các cột không dính vào nhau khi rớt xuống hàng */
+    }
+}
+
+/* =========================================
+   GIAO DIỆN MOBILE CHUYÊN SÂU (Dưới 768px)
+========================================= */
+@media (max-width: 767px) {
+
+    /* 1. Giảm khoảng cách trên/dưới của toàn bộ section */
+    .section-3 {
+        padding: 40px 0;
+    }
+
+    /* 2. Căn chỉnh lại Tiêu đề chính cho vừa màn hình */
+    .section-3 .section-3-title h5 {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .section-3 .section-3-title h2 {
+        font-size: 28px;
+        /* Chữ nhỏ lại để không bị rớt dòng lộn xộn */
+        line-height: 1.3;
+        margin-bottom: 30px;
+    }
+
+    /* 3. Chỉnh lại các thẻ nội dung (Card) */
+    .section-3 .section-3-item {
+        /* Giảm padding hai bên từ 40px xuống 20px để phần text bên trong có chỗ "thở" */
+        padding: 25px 20px;
+        /* Tạo khoảng cách 20px giữa các thẻ khi chúng nằm chồng lên nhau */
+        margin-bottom: 20px;
+    }
+
+    /* 4. Điều chỉnh kích thước icon và text bên trong thẻ */
+    .section-3 .section-3-item .service-icon img {
+        width: 65px;
+        /* Thu nhỏ icon một chút cho cân đối */
+        height: 65px;
+    }
+
+    .section-3 .section-3-item .service-content .title-content {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .section-3 .section-3-item .service-content>p {
+        font-size: 15px;
+        /* Giảm cỡ chữ đoạn văn */
+        margin-bottom: 25px;
+    }
+
+    /* 5. Nút bấm gọn gàng hơn */
+    .section-3 .section-3-item .service-btn {
+        padding: 12px;
+        font-size: 14px;
+        margin-top: 10px;
+    }
+}
+
+/* Tối ưu thêm cho các dòng điện thoại màn hình cực nhỏ (như iPhone SE - Dưới 400px) */
+@media (max-width: 399px) {
+    .section-3 .section-3-title h2 {
+        font-size: 24px;
+    }
+}

@@ -1,0 +1,190 @@
+footer {
+    background-image: url(../image/footer-bg-03.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.footer-top {
+    padding-top: 50px;
+    padding-bottom: 30px;
+    color: #fff;
+    border-bottom: 1px solid #ffffff40;
+}
+
+.footer-top .footer-item {
+    padding: 0 15px;
+}
+
+.footer-top .footer-item .footer-title {
+    height: 100%;
+    margin-bottom: 20px;
+    min-height: 33px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.footer-top .footer-item .footer-content {
+    font-size: 14px;
+}
+
+.footer-top .footer-item .footer-social {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-top .footer-item .footer-social a {
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff40;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.footer-top .footer-item .footer-link li {
+    list-style: none;
+    padding: 5px 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.footer-top .footer-item .footer-link li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-top .footer-item .footer-contact li {
+    list-style: none;
+    padding: 20px 0;
+    display: flex;
+    border-bottom: 1px solid #ffffff40;
+
+}
+
+.footer-top .footer-item .footer-contact li:first-child {
+    padding-top: 0;
+}
+
+.footer-top .footer-item .footer-contact li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.footer-top .footer-item .footer-contact li img {
+    padding: 10px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-top .footer-item .footer-contact li .text {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+
+}
+
+.footer-top .footer-item .footer-contact li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+/* FOOTER BOTTOM */
+.footer-bottom {
+    padding: 40px 0;
+}
+
+.footer-bottom .footer-bottom-right {
+    display: flex;
+    justify-content: end;
+    color: #fff;
+}
+
+/* =======================================================
+   RESPONSIVE CHO TABLET (Màn hình dưới 992px)
+   ======================================================= */
+@media (max-width: 991px) {
+
+    /* Tạo khoảng cách phía dưới cho các cột khi chúng bị rớt thành nhiều dòng */
+    .footer-top .footer-item {
+        margin-bottom: 40px;
+    }
+
+    /* Xóa chiều cao cố định của title để tránh lỗi bị cắt mất chữ */
+    .footer-top .footer-item .footer-title {
+        height: auto;
+        min-height: auto;
+        margin-bottom: 15px;
+    }
+}
+
+/* =======================================================
+   RESPONSIVE CHO MOBILE (Màn hình dưới 768px)
+   ======================================================= */
+@media (max-width: 767px) {
+
+    /* Ép dòng chữ Copyright căn giữa màn hình (thay vì nằm bên phải) để đồng bộ với Logo */
+    .footer-bottom .footer-bottom-right {
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .footer-bottom .footer-bottom-right p {
+        text-align: center;
+    }
+
+    /* Giảm font chữ tiêu đề cột một chút */
+    .footer-top .footer-item .footer-title h3 {
+        font-size: 22px;
+    }
+}
+
+/* =======================================================
+   RESPONSIVE CHO MOBILE SIÊU NHỎ (Màn hình dưới 576px)
+   ======================================================= */
+@media (max-width: 575px) {
+    .footer-top {
+        padding-top: 40px;
+        padding-bottom: 10px;
+        /* Giảm bottom vì các cột bên trong đã có margin-bottom */
+    }
+
+    /* Thu nhỏ logo lại cho cân đối với màn hình điện thoại nhỏ */
+    .footer-bottom .footer-bottom-left .logo img {
+        width: 160px;
+        /* Thu nhỏ từ 200px xuống 160px */
+    }
+
+    /* Giảm nhẹ size chữ copyright */
+    .footer-bottom .footer-bottom-right p {
+        font-size: 13px;
+    }
+
+    /* Giãn cách các phần tử liên hệ để ngón tay dễ bấm hơn trên màn hình cảm ứng */
+    .footer-top .footer-item .footer-contact li {
+        padding: 15px 0;
+    }
+
+    /* Tối ưu khoảng cách biểu tượng mạng xã hội */
+    .footer-top .footer-item .footer-social {
+        gap: 15px;
+    }
+}
