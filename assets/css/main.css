@@ -74,6 +74,8 @@ h6 {
     border-bottom: 1px solid #E4E4E4;
     position: relative;
     transition: all 0.5s ease;
+    list-style: none;
+    display: flex;
 }
 
 .list-news .item-news:hover {
@@ -102,28 +104,16 @@ h6 {
 /* KHUNG CHỨA (Hoàn toàn linh hoạt) */
 .list-news .item-news .image-hover {
     position: absolute;
-
-    /* 1. TỰ ĐỘNG CĂN GIỮA THEO CHIỀU DỌC THẺ LI */
     top: 50%;
-    /* translateY(-50%) sẽ kéo ngược cái khung lên đúng bằng 1 nửa chiều cao của chính nó. 
-       Do đó, khung to hay nhỏ, thẻ li cao hay thấp, nó CŨNG LUÔN NẰM CHÍNH GIỮA thẻ li và tự nhô ra 2 đầu trên/dưới */
     transform: translateY(-50%) scale(0.95);
-    right: 20px;
-
-    /* 2. LINH HOẠT KÍCH THƯỚC */
+    right: 0;
     width: max-content;
-    /* Chiều rộng tự động giãn theo nội dung bên trong */
-    max-width: 320px;
-    /* Đặt một giới hạn an toàn để nó không phình to che hết màn hình */
+    max-width: 250px;
     height: auto;
-    /* Chiều cao tự động dài ra theo nội dung/ảnh */
-
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
     z-index: 100;
-
-    /* Hiệu ứng mượt mà (Thêm hiệu ứng scale nhẹ cho sinh động) */
     transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
@@ -132,20 +122,18 @@ h6 {
     opacity: 1;
     visibility: visible;
     transform: translateY(-50%) scale(1);
-    /* Trả về kích thước thật 100% */
 }
 
-/* 4. TỐI ƯU CHO NỘI DUNG BÊN TRONG (Ảnh hoặc Text) */
 .list-news .item-news .image-hover img {
     display: block;
-    /* Xóa khoảng trắng thừa mờ ám hay xuất hiện dưới đáy thẻ img */
     width: 100%;
+    max-width: 250px;
     height: auto;
-    /* Ảnh tự động giữ đúng tỷ lệ gốc (không bị méo) */
+}
 
-    /* Bạn có thể dùng aspect-ratio nếu muốn ép ảnh luôn là hình vuông hoặc chữ nhật 
-       Ví dụ: aspect-ratio: 1 / 1; object-fit: cover; */
-
-    border-radius: 6px;
-    box-shadow: -10px 15px 30px rgba(0, 0, 0, 0.15);
+@media(max-width: 767px) {
+    .list-news .item-news .image-hover {
+        max-width: 150px;
+        right: -40px;
+    }
 }

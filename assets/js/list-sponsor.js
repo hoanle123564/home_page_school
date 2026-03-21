@@ -5,7 +5,6 @@ const mySwiper = new Swiper('.list-sponsor', {
     },
     loop: true,
     slidesPerView: 5,
-    spaceBetween: 0,
     breakpoints: {
         320: {
             slidesPerView: 1,

@@ -1,3 +1,7 @@
+.section-5 {
+    border-bottom: 1px solid #e5e5e5;
+}
+
 .section-5 .list-sponsor .swiper-slide .brand {
     display: flex;
     align-items: center;
