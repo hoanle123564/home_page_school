@@ -96,6 +96,11 @@
         font-size: 30px;
     }
 
+    .section-2 .section-2-left .about-img .about-badge {
+        top: 0;
+        right: 0;
+    }
+
     .section-2 .section-2-left .about-img .about-badge img {
         width: 120px;
         height: 120px;

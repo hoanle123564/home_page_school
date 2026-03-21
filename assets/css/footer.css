@@ -11,7 +11,7 @@ footer {
 }
 
 .footer-top {
-    padding-top: 50px;
+    padding-top: 150px;
     padding-bottom: 30px;
     color: #fff;
     border-bottom: 1px solid #ffffff40;
@@ -118,12 +118,8 @@ footer {
     color: #fff;
 }
 
-/* =======================================================
-   RESPONSIVE CHO TABLET (Màn hình dưới 992px)
-   ======================================================= */
 @media (max-width: 991px) {
 
-    /* Tạo khoảng cách phía dưới cho các cột khi chúng bị rớt thành nhiều dòng */
     .footer-top .footer-item {
         margin-bottom: 40px;
     }
@@ -136,12 +132,8 @@ footer {
     }
 }
 
-/* =======================================================
-   RESPONSIVE CHO MOBILE (Màn hình dưới 768px)
-   ======================================================= */
 @media (max-width: 767px) {
 
-    /* Ép dòng chữ Copyright căn giữa màn hình (thay vì nằm bên phải) để đồng bộ với Logo */
     .footer-bottom .footer-bottom-right {
         justify-content: center;
         margin-top: 20px;
@@ -151,39 +143,30 @@ footer {
         text-align: center;
     }
 
-    /* Giảm font chữ tiêu đề cột một chút */
     .footer-top .footer-item .footer-title h3 {
         font-size: 22px;
     }
 }
 
-/* =======================================================
-   RESPONSIVE CHO MOBILE SIÊU NHỎ (Màn hình dưới 576px)
-   ======================================================= */
+
 @media (max-width: 575px) {
     .footer-top {
-        padding-top: 40px;
+        padding-top: 150px;
         padding-bottom: 10px;
-        /* Giảm bottom vì các cột bên trong đã có margin-bottom */
     }
 
-    /* Thu nhỏ logo lại cho cân đối với màn hình điện thoại nhỏ */
     .footer-bottom .footer-bottom-left .logo img {
         width: 160px;
-        /* Thu nhỏ từ 200px xuống 160px */
     }
 
-    /* Giảm nhẹ size chữ copyright */
     .footer-bottom .footer-bottom-right p {
         font-size: 13px;
     }
 
-    /* Giãn cách các phần tử liên hệ để ngón tay dễ bấm hơn trên màn hình cảm ứng */
     .footer-top .footer-item .footer-contact li {
         padding: 15px 0;
     }
 
-    /* Tối ưu khoảng cách biểu tượng mạng xã hội */
     .footer-top .footer-item .footer-social {
         gap: 15px;
     }

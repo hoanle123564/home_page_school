@@ -134,6 +134,5 @@ h6 {
 @media(max-width: 767px) {
     .list-news .item-news .image-hover {
         max-width: 150px;
-        right: -40px;
     }
 }

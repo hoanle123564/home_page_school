@@ -55,13 +55,7 @@
     font-weight: 700;
 }
 
-
-/* =======================================================
-   RESPONSIVE CHO TABLET (Màn hình dưới 992px)
-   ======================================================= */
 @media (max-width: 991px) {
-
-    /* Tạo khoảng cách giữa ảnh to bên trái và danh sách tin tức bên phải khi xếp chồng */
 
     .section-4 .section-4-content-left .blog-content a {
         font-size: 30px;
@@ -71,24 +65,17 @@
         margin-top: 80px;
     }
 
-    /* Giảm kích thước chữ tiêu đề xuống một chút */
     .section-title .main-title {
         font-size: 40px;
     }
 }
 
-/* =======================================================
-   RESPONSIVE CHO MOBILE (Màn hình dưới 768px)
-   ======================================================= */
 @media (max-width: 767px) {
-
-    /* Thu nhỏ chữ tiêu đề chính cho vừa màn hình điện thoại */
     .section-title .main-title {
         font-size: 32px;
         margin-bottom: 10px;
     }
 
-    /* Thu nhỏ ảnh bài viết to bên trái */
     .section-4-content-left .blog-img img {
         width: 100%;
         height: auto;
@@ -98,12 +85,10 @@
         font-size: 25px;
     }
 
-    /* Thu nhỏ chữ của tiêu đề tin tức */
     .list-news .item-news .news-content h4 a {
         font-size: 18px;
     }
 
-    /* Căn chỉnh lại khoảng cách và khối ngày tháng cho gọn */
     .list-news .item-news {
         padding: 15px 0 !important;
         gap: 15px !important;
@@ -118,12 +103,8 @@
     }
 }
 
-/* =======================================================
-   RESPONSIVE CHO MOBILE SIÊU NHỎ (Màn hình dưới 576px)
-   ======================================================= */
 @media (max-width: 575px) {
 
-    /* Ép tiêu đề chính nhỏ lại thêm một nấc để không bị rớt thành quá nhiều dòng */
     .section-title .main-title {
         font-size: 26px;
     }
@@ -137,14 +118,12 @@
         font-size: 20px;
     }
 
-    /* Giảm khoảng cách (gap) giữa cục ngày tháng và phần chữ */
     .list-news .item-news {
         gap: 10px !important;
         padding-top: 15px !important;
         padding-bottom: 15px !important;
     }
 
-    /* Thu nhỏ cục ngày tháng, set min-width để nó không bị chữ bên phải chèn ép */
     .list-news .item-news .news-box {
         padding: 8px 10px;
         min-width: 65px;
@@ -158,11 +137,9 @@
         font-size: 12px;
     }
 
-    /* Tối ưu lại font chữ của phần tin tức */
     .list-news .item-news .news-content h4 a {
         font-size: 16px;
         line-height: 1.3;
-        /* Cho các dòng chữ sát lại nhau một chút cho gọn */
     }
 
     .list-news .item-news .news-content p {

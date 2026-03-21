@@ -32,17 +32,12 @@
     font-weight: 700;
 }
 
-/* =======================================================
-   SECTION 6: RESPONSIVE CHO TABLET (Màn hình dưới 992px)
-   ======================================================= */
 @media (max-width: 991.98px) {
 
-    /* Giảm khoảng cách đệm trên dưới của cả section */
     .section-6 {
         padding: 80px 0;
     }
 
-    /* Thu nhỏ số và tiêu đề một chút */
     .section-6 .list-news .item-news .news-box strong {
         font-size: 52px;
     }
@@ -52,21 +47,16 @@
     }
 }
 
-/* =======================================================
-   SECTION 6: RESPONSIVE CHO MOBILE (Màn hình dưới 768px)
-   ======================================================= */
 @media (max-width: 767.98px) {
     .section-6 {
         padding: 60px 0;
     }
 
-    /* Ghi đè class gap-5 của Bootstrap, nếu không khoảng trống sẽ chiếm hết màn hình */
     .section-6 .list-news .item-news {
         display: flex;
         flex-direction: column;
     }
 
-    /* Tiếp tục thu nhỏ chữ */
     .section-6 .list-news .item-news .news-box strong {
         font-size: 40px;
     }
@@ -80,17 +70,12 @@
     }
 }
 
-/* =======================================================
-   SECTION 6: RESPONSIVE CHO MOBILE SIÊU NHỎ (Màn hình dưới 576px)
-   ======================================================= */
 @media (max-width: 575.98px) {
 
-    /* Ép padding lại để tiết kiệm không gian */
     .section-6 {
         padding: 40px 0;
     }
 
-    /* Ở màn hình cực nhỏ, căn đầu lên trên cùng (flex-start) để số và chữ không bị lệch khi chữ rớt thành 2-3 dòng */
     .section-6 .list-news .item-news {
         gap: 15px !important;
         align-items: flex-start !important;
@@ -98,10 +83,8 @@
 
     .section-6 .list-news .item-news .news-box {
         padding: 5px 0;
-        /* Giảm padding thừa để số nhích lên cho bằng với chữ */
     }
 
-    /* Thu nhỏ tối đa cho màn hình hẹp */
     .section-6 .list-news .item-news .news-box strong {
         font-size: 32px;
     }
