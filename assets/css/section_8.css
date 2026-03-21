@@ -1,0 +1,84 @@
+.section-8 {
+    padding: 100px 0;
+}
+
+.section-8 .section-title {
+    margin-bottom: 100px;
+}
+
+.section-8 .section-title .main-title {
+    font-size: 28px;
+
+}
+
+.section-8 .item-fun-fact {
+    border-right: 2px solid #E4E4E4;
+}
+
+.section-8 .item-fun-fact .title-fun-fact {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--red-color);
+}
+
+.section-8 .item-fun-fact strong {
+    -webkit-text-stroke: 1px #000;
+    -webkit-text-fill-color: transparent;
+    font-size: 40px;
+}
+
+/* --- CSS RESPONSIVE (Mobile & Tablet) --- */
+
+/* Dành cho màn hình dưới 768px (Mobile nói chung) */
+@media (max-width: 767px) {
+
+    /* 1. Giảm padding của cả section */
+    .section-8 {
+        padding: 50px 0;
+    }
+
+    /* 2. Căn chỉnh lại khoảng cách cho tiêu đề chính */
+    .section-8 .section-title {
+        margin-bottom: 30px;
+    }
+
+    .section-8 .section-title .section-logo img {
+        width: 80px;
+    }
+
+    .section-8 .section-title .support-title {
+        font-size: 12px;
+    }
+
+    .section-8 .section-title .main-title {
+        font-size: 22px;
+        padding: 10px 15px;
+    }
+
+    .section-8 .item-fun-fact {
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+
+    .section-8 .item-fun-fact .title-fun-fact {
+        font-size: 18px;
+    }
+
+    .section-8 .item-fun-fact strong {
+        font-size: 34px;
+    }
+}
+
+@media (max-width: 575px) {
+    .section-8 {
+        padding: 40px 0;
+    }
+
+    .section-8 .item-fun-fact strong {
+        font-size: 28px;
+    }
+
+    .section-8 .item-fun-fact .title-fun-fact {
+        font-size: 16px;
+    }
+}
