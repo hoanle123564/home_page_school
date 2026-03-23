@@ -91,7 +91,7 @@ header .header-btn:hover i {
 }
 
 
-/* --- Style cho nút bấm Mobile --- */
+/* --- Style btn Mobile --- */
 .mobile-menu-toggle {
     background: #fff;
     border: 1px solid #000;
@@ -100,30 +100,23 @@ header .header-btn:hover i {
     cursor: pointer;
     color: #000;
     width: 45px;
-    /* Cố định width/height để khi đổi icon nút không bị co giãn */
     height: 45px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
 }
 
-/* --- Responsive Mobile (dưới 992px) --- */
 @media (max-width: 991px) {
-
-    /* Đặt menu thả từ trên xuống ngay dưới header */
     .menu-wrapper {
         position: absolute;
         top: 100%;
-        /* Nằm ngay sát dưới cùng của header */
         left: 0;
         width: 100%;
         background-color: #fff;
         z-index: 1001;
         display: none;
-        /* Ẩn đi để dùng jQuery slideToggle */
         box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
         padding: 10px 15px;
-        /* Thêm padding để content không sát lề */
     }
 
     header .list-menu {
@@ -152,7 +145,6 @@ header .header-btn:hover i {
         font-weight: 600;
     }
 
-    /* Nút Toggle Submenu (+/-) */
     .submenu-toggle {
         position: absolute;
         right: 10px;
@@ -171,7 +163,6 @@ header .header-btn:hover i {
         position: static;
         visibility: visible;
         display: none;
-        /* Ẩn để jQuery slideToggle */
         box-shadow: none;
         background-color: #fcfcfc;
     }
@@ -188,19 +179,15 @@ header .header-btn:hover i {
     }
 }
 
-/* --- Responsive cho điện thoại/Tablet (dưới 768px) --- */
 @media (max-width: 767px) {
     header {
         padding: 12px 0;
-        /* Giảm độ dày của header để tiết kiệm diện tích màn hình */
     }
 
-    /* Thu nhỏ logo để không bị chèn ép với nút Hamburger */
     header .logo img {
         width: 160px;
     }
 
-    /* Thu nhỏ nút bấm một chút cho cân đối */
     .mobile-menu-toggle {
         width: 40px;
         height: 40px;
@@ -209,27 +196,135 @@ header .header-btn:hover i {
     }
 }
 
-/* --- Responsive cho điện thoại màn hình rất nhỏ (dưới 576px) --- */
 @media (max-width: 575px) {
     header .logo img {
         width: 140px;
-        /* Thu nhỏ logo thêm nữa trên các dòng máy nhỏ (như iPhone SE) */
     }
 
-    /* Giảm cỡ chữ và khoảng cách trong menu mobile để vừa vặn hơn */
     header .list-menu li a {
         font-size: 14px;
         padding: 12px 10px;
     }
 
-    /* Điều chỉnh menu con thụt lề ít hơn */
     header .list-menu li .sub-menu li a {
         font-size: 13px;
         padding: 10px 20px;
     }
 
-    /* Đưa nút cộng trừ sát lề hơn một chút */
     .submenu-toggle {
         font-size: 14px;
     }
+}
+
+/* --- Overlay (Lớp phủ nền đen) --- */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Làm đen nội dung xung quanh */
+    z-index: 1050;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Kích hoạt lớp phủ */
+.menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* --- Menu trượt từ bên phải --- */
+.side-search-menu {
+    position: fixed;
+    top: 0;
+    right: -350px;
+    /* Giấu menu sang bên phải 350px */
+    width: 300px;
+    height: 100vh;
+    background-color: #04091e;
+    /* Màu xanh đen giống trong ảnh */
+    z-index: 1060;
+    /* Phải lớn hơn overlay */
+    padding: 30px 20px;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+    transition: right 0.4s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+/* Kích hoạt menu trượt vào */
+.side-search-menu.active {
+    right: 0;
+}
+
+/* --- Style cho thanh tìm kiếm --- */
+.side-search-form {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.side-search-form input {
+    width: 100%;
+    padding: 10px 15px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+    outline: none;
+}
+
+.side-search-form button {
+    background-color: #a81c1c;
+    /* Nút màu đỏ đô */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.side-search-form button:hover {
+    background-color: #cc2222;
+}
+
+/* --- Style cho danh sách Menu --- */
+.side-menu-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.side-menu-links li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.side-menu-links li a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 0;
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+/* Hover đổi từ trắng sang đỏ theo yêu cầu */
+.side-menu-links li a:hover {
+    color: #a81c1c;
+}
+
+/* --- Style cho thông tin liên hệ --- */
+.side-contact-info {
+    margin-top: 30px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.side-contact-info p {
+    margin: 8px 0;
 }

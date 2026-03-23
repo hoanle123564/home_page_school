@@ -154,7 +154,11 @@
                             </ul>
                         </li>
                         <li><a href="#">CONTACT</a></li>
-                        <li class="d-none d-lg-block"> <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                        <li class="d-none d-lg-block">
+                            <a href="#" id="search-menu-toggle">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </a>
+                        </li>
                     </ul>
                 </div>
 
@@ -686,7 +690,7 @@
                                     <h4 class="title-fun-fact">
                                         Student Nationalities
                                     </h4>
-                                    <strong>0%</strong>
+                                    <strong class="counter" data-target="90" data-suffix="%">0%</strong>
                                 </div>
                             </div>
                             <div class="col-md-4">
@@ -694,7 +698,7 @@
                                     <h4 class="title-fun-fact">
                                         International Students
                                     </h4>
-                                    <strong>0%</strong>
+                                    <strong class="counter" data-target="22" data-suffix="%">0%</strong>
                                 </div>
                             </div>
                             <div class="col-md-4 ">
@@ -702,7 +706,7 @@
                                     <h4 class="title-fun-fact">
                                         Different Majors
                                     </h4>
-                                    <strong>0</strong>
+                                    <strong class="counter" data-target="18" data-suffix="">0</strong>
                                 </div>
                             </div>
                         </div>
@@ -909,9 +913,40 @@
             </div>
         </div>
     </footer>
+
+    <!-- btn back to top -->
     <button class="back-to-top" id="backToTop">
         <i class="fa-solid fa-arrow-turn-up"></i>
     </button>
+
+    <!-- menu overlay -->
+    <div id="menu-overlay" class="menu-overlay"></div>
+
+    <!-- menu search -->
+    <div id="side-search-menu" class="side-search-menu">
+        <div class="side-search-header">
+            <form class="side-search-form">
+                <input type="text" placeholder="Search...">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+        </div>
+
+        <ul class="side-menu-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Courses</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Teacher</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
+        <div class="side-contact-info">
+            <p>+8 12 3456897</p>
+            <p>Info@Example.Com</p>
+        </div>
+    </div>
 </body>
 <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
@@ -933,5 +968,7 @@
 <script src="./assets/js/hover-img.js"></script>
 <script src="./assets/js/list-sponsor.js"></script>
 <script src="./assets/js/campus.js"></script>
+<script src="./assets/js/counter.js"></script>
+<script src="./assets/js/menu_toggle.js"></script>
 
 </html>
