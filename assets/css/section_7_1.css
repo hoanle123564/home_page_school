@@ -15,7 +15,7 @@
 .section-7-1 .campus-warp .section-campus .campus-item {
     -webkit-text-stroke: 1px rgba(255, 255, 255, 0.4);
     -webkit-text-fill-color: transparent;
-    font-size: clamp(20px, 5vw, 100px);
+    font-size: clamp(30px, 5vw, 100px);
 }
 
 .section-7-1 .campus-warp .image-video {
