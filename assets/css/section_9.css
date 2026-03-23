@@ -31,6 +31,7 @@
 .section-9 .section-apply .apply-content .send-mail input {
     padding: 10px;
     height: 100%;
+    font-size: 14px;
 }
 
 .section-9 .section-apply .apply-content .send-mail button {
@@ -42,6 +43,7 @@
     text-transform: uppercase;
     font-weight: 600;
     height: 100%;
+    font-size: 14px;
 }
 
 .section-9 .section-apply .apply-content .send-mail button i {
@@ -59,12 +61,11 @@
     }
 
     .section-9 .section-apply .apply-content .send-mail input {
-        font-size: 14px;
-        width: 100%;
+        width: 60%;
     }
 
     .section-9 .section-apply .apply-content .send-mail button {
-        font-size: 14px;
-        width: 100%;
+        width: 40%;
+        padding: 10px 0;
     }
 }

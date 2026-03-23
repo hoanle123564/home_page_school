@@ -1,6 +1,6 @@
 const mySwiper = new Swiper('.list-sponsor', {
     autoplay: {
-        delay: 2000,
+        delay: 3000,
         disableOnInteraction: false,
     },
     loop: true,

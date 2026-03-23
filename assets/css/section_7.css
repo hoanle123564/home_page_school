@@ -1,0 +1,132 @@
+.section-7 {
+    position: relative;
+}
+
+.hero-video-wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 600px;
+    background-image: url('../image/section_7/video3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-video-wrapper .section-campus {
+    position: absolute;
+    top: 15%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+}
+
+.hero-video-wrapper .campus-item {
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.4);
+    -webkit-text-fill-color: transparent;
+    font-size: clamp(60px, 5vw, 100px);
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* Nút Play */
+/* .hero-video-wrapper .play-video {
+    position: relative;
+    z-index: 2;
+} */
+
+.hero-video-wrapper .play-video a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.hero-video-wrapper .play-button {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.hero-video-wrapper .play-button i {
+    font-size: 35px;
+    color: #000;
+}
+
+.image-campus-wrapper {
+    position: relative;
+    z-index: 3;
+    margin-top: -150px;
+}
+
+.image-campus-wrapper img {
+    width: 100%;
+    object-fit: cover;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.side-img img {
+    height: 350px;
+}
+
+.center-img img {
+    height: 500px;
+}
+
+@media (max-width: 991px) {
+    .hero-video-wrapper {
+        min-height: 450px;
+    }
+
+    .hero-video-wrapper .play-button {
+        width: 90px;
+        height: 90px;
+    }
+
+    .hero-video-wrapper .play-button i {
+        font-size: 28px;
+    }
+
+    .image-campus-wrapper {
+        margin-top: -100px;
+    }
+
+    .side-img img {
+        height: 250px;
+    }
+
+    .center-img img {
+        height: 350px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .hero-video-wrapper .campus-item {
+        font-size: clamp(40px, 4vw, 60px);
+    }
+
+    .hero-video-wrapper {
+        min-height: 350px;
+    }
+
+    .hero-video-wrapper .play-button {
+        width: 75px;
+        height: 75px;
+    }
+
+    .hero-video-wrapper .play-button i {
+        font-size: 24px;
+        margin-left: 5px;
+    }
+
+    .image-campus-wrapper {
+        margin-top: 0;
+    }
+}
