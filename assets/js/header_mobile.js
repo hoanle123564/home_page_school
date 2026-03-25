@@ -3,7 +3,6 @@ $(document).ready(function () {
     $('.mobile-menu-toggle').click(function () {
         $('.menu-wrapper').slideToggle(300); // Trượt từ trên xuống
 
-        // Đổi icon giữa hamburger và X
         var $icon = $(this).find('i');
         if ($icon.hasClass('fa-bars')) {
             $icon.removeClass('fa-bars').addClass('fa-xmark');
