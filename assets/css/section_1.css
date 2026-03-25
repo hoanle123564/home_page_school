@@ -4,7 +4,6 @@
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
-    height: 100%;
 }
 
 .section-1 .intro-section .animation {
@@ -134,7 +133,6 @@
 @media (max-width: 575px) {
     .section-1 .intro-section {
         height: auto;
-        min-height: 100vh;
     }
 
     .section-1 .intro-section .intro-content {

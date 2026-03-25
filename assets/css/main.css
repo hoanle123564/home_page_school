@@ -12,6 +12,10 @@
     font-family: "Inter", sans-serif;
 }
 
+body, html {
+    overflow-x: hidden;
+}
+
 ul {
     margin: 0px;
     padding: 0px;
