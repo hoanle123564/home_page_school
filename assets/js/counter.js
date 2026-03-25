@@ -1,48 +1,28 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            // Khi cuộn tới section này
-            if (entry.isIntersecting) {
-                const counters = entry.target.querySelectorAll('.counter');
+const observer = new IntersectionObserver(([entry]) => {
+    // Nếu chưa lướt tới (hoặc chưa hiển thị đủ 50%) thì bỏ qua
+    if (!entry.isIntersecting) return;
 
-                counters.forEach(el => {
-                    const target = +el.dataset.target;
-                    const suffix = el.dataset.suffix || '';
-                    const duration = 3000;
-                    let startTimestamp = null;
+    document.querySelectorAll('.counter').forEach(el => {
+        const target = +el.dataset.target;
+        const suffix = el.dataset.suffix || '';
+        let start;
 
-                    const step = (timestamp) => {
-                        if (!startTimestamp) startTimestamp = timestamp;
+        const animate = (time) => {
+            if (!start) start = time;
+            const percent = Math.min((time - start) / 2000, 1);
 
-                        // Tính toán phần trăm thời gian đã trôi qua (tối đa là 1 ~ 100%)
-                        const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+            el.innerText = Math.floor(percent * target) + suffix;
 
-                        // Cập nhật số dựa trên đúng phần trăm thời gian
-                        el.innerText = Math.floor(progress * target) + suffix;
+            // Nếu chưa đạt 100% (1) thì gọi lại hàm
+            if (percent < 1) requestAnimationFrame(animate);
+        };
 
-                        // Nếu chưa hết 2 giây thì tiếp tục chạy
-                        if (progress < 1) {
-                            requestAnimationFrame(step);
-                        } else {
-                            // Đảm bảo kết thúc hiển thị đúng số đích
-                            el.innerText = target + suffix;
-                        }
-                    };
-
-                    // Kích hoạt animation
-                    requestAnimationFrame(step);
-                });
-
-                // Ngừng theo dõi để không chạy lại khi cuộn ngược lên
-                observer.unobserve(entry.target);
-            }
-        });
-    }, {
-        // Bắt buộc section phải hiện lên ít nhất 50% màn hình mới kích hoạt
-        threshold: 0.5
+        requestAnimationFrame(animate);
     });
 
-    // Chỉ định theo dõi section-8
-    const section = document.querySelector('.section-8');
-    if (section) observer.observe(section);
-});
+    observer.disconnect(); // Chạy xong thì hủy theo dõi
+    // chỉ chạy 1 lần sau khi lướt tới section-8
+}, { threshold: 0.5 });
+
+// Bắt đầu theo dõi section-8
+observer.observe(document.querySelector('.section-8'));
