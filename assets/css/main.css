@@ -1,6 +1,8 @@
 :root {
     --primary-color: #9D2235;
     --red-color: #641320;
+    --white-color: #fff;
+    --black-color: #000;
 }
 
 * {
@@ -33,6 +35,19 @@ ul {
 
 .back-to-top i {
     font-size: 20px;
+}
+
+@media (max-width: 767px) {
+    .back-to-top {
+        width: 40px;
+        height: 40px;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .back-to-top i {
+        font-size: 16px;
+    }
 }
 
 h1,
@@ -95,6 +110,11 @@ h6 {
     font-weight: 600;
     text-decoration: none;
     color: #000;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .list-news .item-news .news-content h4 a:hover {
@@ -105,7 +125,7 @@ h6 {
     opacity: 0.8;
 }
 
-/* KHUNG CHỨA (Hoàn toàn linh hoạt) */
+/* KHUNG CHỨA  */
 .list-news .item-news .image-hover {
     position: absolute;
     top: 50%;
@@ -117,11 +137,11 @@ h6 {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    z-index: 100;
+    z-index: 50;
     transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-/* 3. HIỆU ỨNG KHI SHOW */
+/* SHOW */
 .list-news .item-news.show .image-hover {
     opacity: 1;
     visibility: visible;

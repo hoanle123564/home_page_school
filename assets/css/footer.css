@@ -19,12 +19,14 @@ footer {
 
 .footer-top .footer-item {
     padding: 0 15px;
+    display: flex;
+    flex-direction: column;
 }
 
 .footer-top .footer-item .footer-title {
-    height: 100%;
+    flex-grow: 1;
     margin-bottom: 20px;
-    min-height: 33px;
+    min-height: 40px;
     display: -webkit-box;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
@@ -34,6 +36,7 @@ footer {
 
 .footer-top .footer-item .footer-content {
     font-size: 14px;
+
 }
 
 .footer-top .footer-item .footer-social {
