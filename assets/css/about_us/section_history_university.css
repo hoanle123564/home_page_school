@@ -19,6 +19,10 @@
 
 .section-history-university .list-history-university .item-history-university .content-history-university .title-history-university h6 {
     color: var(--primary-color);
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .section-history-university .list-history-university .item-history-university .content-history-university .title-history-university strong {
@@ -33,12 +37,17 @@
 .section-history-university .list-history-university .item-history-university .content-history-university p {
     opacity: 0.8;
     font-size: 18px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 @media (max-width: 767px) {
     .section-history-university {
         padding: 60px 0;
     }
+
     .section-history-university .list-history-university .item-history-university .content-history-university .title-history-university strong {
         font-size: 35px;
     }

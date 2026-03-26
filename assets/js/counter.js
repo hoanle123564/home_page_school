@@ -21,8 +21,6 @@ const observer = new IntersectionObserver((entries, observer) => {
     });
 }, { threshold: 0.5 });
 
-// Theo dõi trực tiếp các thẻ '.counter' thay vì các section lớn
-// Điều này giúp trên mobile (khi section rất dài) bộ đếm vẫn hoạt động ngay khi lọt vào màn hình
 document.querySelectorAll('.counter').forEach(counter => {
     observer.observe(counter);
 });
