@@ -102,10 +102,6 @@
         font-size: 38px;
         margin-bottom: 30px;
     }
-
-    .section-3 .section-3-item {
-        margin-bottom: 30px;
-    }
 }
 
 @media (max-width: 767px) {
