@@ -1,8 +1,8 @@
-const swiper = new Swiper('.section-campus', {
+const swiperSlideAboutUs = new Swiper('.list-slide-about-us', {
     slidesPerView: 'auto',
     spaceBetween: 50,
     loop: true,
-    speed: 10000,
+    speed: 6000,
     autoplay: {
         delay: 0,
         disableOnInteraction: false,

@@ -127,7 +127,6 @@ footer {
         margin-bottom: 40px;
     }
 
-    /* Xóa chiều cao cố định của title để tránh lỗi bị cắt mất chữ */
     .footer-top .footer-item .footer-title {
         height: auto;
         min-height: auto;

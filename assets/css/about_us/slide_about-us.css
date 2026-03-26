@@ -1,0 +1,55 @@
+.section-slide-about-us {
+    padding: 100px 0;
+}
+
+.list-slide-about-us .swiper-wrapper {
+    transition-timing-function: linear !important;
+}
+
+.list-slide-about-us .swiper-slide {
+    display: flex;
+    align-items: center;
+    width: auto;
+}
+
+.section-slide-about-us .list-slide-about-us .item-slide-about-us {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    gap: 20px;
+}
+
+.section-slide-about-us .list-slide-about-us .item-slide-about-us .icon-about-us {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.section-slide-about-us .list-slide-about-us .item-slide-about-us .icon-about-us img {
+    object-fit: cover;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.section-slide-about-us .list-slide-about-us .item-slide-about-us .normal-color {
+    -webkit-text-stroke: 1px var(--red-color);
+    -webkit-text-fill-color: transparent;
+    height: 100%;
+    font-size: clamp(30px, 5vw, 160px);
+    text-transform: uppercase;
+}
+
+.section-slide-about-us .list-slide-about-us .item-slide-about-us .red-color {
+    color: var(--red-color) !important;
+    height: 100%;
+    font-size: clamp(30px, 5vw, 160px);
+    text-transform: uppercase;
+
+}
+
+@media (max-width: 767px) {
+    .section-slide-about-us {
+        padding: 50px 0;
+    }
+}

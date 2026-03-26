@@ -1,0 +1,84 @@
+.section-contact {
+    padding: 100px 0;
+}
+
+.section-contact .contact-warp {
+    text-align: center;
+    padding: 30px;
+    border: 1px solid #e5e5e5;
+    height: 100%;
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+    transition: all0.5s ease;
+}
+
+.section-contact .contact-warp .contact-title {
+    font-family: var(--font-title);
+    font-weight: 600;
+}
+
+.section-contact .contact-warp p {
+    color: var(--black-color);
+    opacity: 0.7;
+    font-size: 16px;
+}
+
+.section-contact .contact-warp a {
+    text-decoration: none;
+    color: var(--black-color);
+}
+
+.section-contact .contact-warp a:hover {
+    color: var(--red-color);
+}
+
+.section-contact .place-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.section-contact .place-contact .btn-place {
+    background-color: var(--white-color);
+    border: 1px solid #e5e5e5;
+    padding: 12px;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.section-contact .place-contact .btn-place.active {
+    background-color: #5c1822;
+    color: #ffffff;
+    border-color: #5c1822;
+}
+
+
+@media(max-width: 991px) {
+    .section-contact {
+        padding: 60px 0;
+    }
+
+    .section-contact .contact-warp {
+        padding: 20px;
+    }
+}
+
+@media(max-width: 767px) {
+    .section-contact {
+        padding: 50px 0;
+    }
+
+    .section-contact .contact-warp .contact-title {
+        font-size: 18px;
+    }
+
+    .section-contact .contact-warp p,
+    .section-contact .contact-warp a,
+    .section-contact .place-contact .btn-place {
+        font-size: 14px;
+    }
+}

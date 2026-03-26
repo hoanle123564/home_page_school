@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", function () {
     newsItems.forEach(item => {
         item.addEventListener("mouseenter", function () {
             newsItems.forEach(el => el.classList.remove("show"));
-
             this.classList.add("show");
         });
     });

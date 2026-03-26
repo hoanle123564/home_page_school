@@ -1,0 +1,74 @@
+.header-page {
+    position: relative;
+    overflow: hidden;
+    padding: 145px 0;
+}
+
+.header-page .image-page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.header-page .image-page img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.header-page .header-box {
+    position: relative;
+    text-decoration: none;
+    color: var(--white-color);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-page .header-box h1 {
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.header-page .header-box .breadcrumb-item+.breadcrumb-item::before {
+    color: var(--white-color);
+}
+
+.header-page .header-box .breadcrumb-item a,
+.header-page .header-box .breadcrumb-item {
+    text-decoration: none;
+    color: var(--white-color);
+    font-size: 16px;
+    font-weight: 400;
+    align-items: center;
+}
+
+.header-page .header-box .breadcrumb-item:last-child {
+    opacity: 0.6;
+}
+
+@media (max-width: 991px) {
+    .header-page {
+        padding: 100px 0;
+    }
+
+    .header-page .header-box h1 {
+        font-size: 45px;
+    }
+}
+
+@media (max-width: 767px) {
+    .header-page {
+        padding: 60px 0;
+    }
+
+    .header-page .header-box h1 {
+        font-size: 35px;
+    }
+}

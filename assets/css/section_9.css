@@ -8,6 +8,7 @@
     z-index: 10;
     margin-bottom: -100px;
     padding: 20px;
+    border: 1px solid #E4E4E4;
 }
 
 .section-9 .section-apply .apply-img img {
@@ -25,31 +26,50 @@
 }
 
 .section-9 .section-apply .apply-content .send-mail {
+    display: flex;
+    /* Đảm bảo là flexbox */
+    align-items: stretch;
+    /* Ép các phần tử con có chiều cao bằng nhau */
     margin-top: 20px;
+    gap: 0;
 }
 
 .section-9 .section-apply .apply-content .send-mail input {
-    padding: 10px;
-    height: 100%;
+    padding: 10px 15px;
     font-size: 14px;
+    border: 1px solid #ccc;
+    /* Thêm border cụ thể */
+    border-right: none;
+    /* Bỏ border phải để khít với nút */
+    outline: none;
+
+    /* QUAN TRỌNG: Đảm bảo padding và border không làm tăng kích thước */
+    box-sizing: border-box;
+    height: 45px;
+    /* Đặt một chiều cao cố định cho cả hai */
 }
 
 .section-9 .section-apply .apply-content .send-mail button {
-    padding: 10px 15px;
+    padding: 0 20px;
     border: none;
     background-color: var(--red-color);
     color: #fff;
     cursor: pointer;
     text-transform: uppercase;
     font-weight: 600;
-    height: 100%;
     font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    /* QUAN TRỌNG: Khớp chiều cao với input */
+    box-sizing: border-box;
+    height: 45px;
 }
 
 .section-9 .section-apply .apply-content .send-mail button i {
     transform: rotate(-45deg);
 }
-
 
 @media (max-width: 575px) {
     .section-9 .section-apply {
