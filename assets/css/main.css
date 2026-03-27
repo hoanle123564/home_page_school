@@ -116,6 +116,34 @@ h6 {
     font-family: var(--font-title);
 }
 
+@media (max-width: 991px) {
+    .section-title .main-title {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 767px) {
+    .section-title .main-title {
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
+
+    .section-title .support-title {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 575px) {
+    .section-title .main-title {
+        font-size: 26px;
+    }
+
+    .section-title .support-title {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+}
+
 /* list news */
 .list-news .item-news {
     border-bottom: 1px solid #E4E4E4;
